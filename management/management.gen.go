@@ -5738,6 +5738,14 @@ func (t *TenantFlags) GetEnableSSO() bool {
 	return *t.EnableSSO
 }
 
+// GetIssueOpaqueAccessTokens returns the IssueOpaqueAccessTokens field if it's non-nil, zero value otherwise.
+func (t *TenantFlags) GetIssueOpaqueAccessTokens() bool {
+	if t == nil || t.IssueOpaqueAccessTokens == nil {
+		return false
+	}
+	return *t.IssueOpaqueAccessTokens
+}
+
 // GetUniversalLogin returns the UniversalLogin field if it's non-nil, zero value otherwise.
 func (t *TenantFlags) GetUniversalLogin() bool {
 	if t == nil || t.UniversalLogin == nil {

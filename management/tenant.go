@@ -198,6 +198,12 @@ type TenantFlags struct {
 	// If enabled, this will use the scope description when generating a consent
 	// prompt. Otherwise, the scope name is used.
 	UseScopeDescriptionsForConsent *bool `json:"use_scope_descriptions_for_consent,omitempty"`
+
+	// If enabled, the Auth0 platform issues Access Tokens and Authorization Codes
+	// of fixed length. By default, these are of variable length.
+	// https://auth0.com/docs/troubleshoot/product-lifecycle/deprecations-and-migrations#opaque-access-token-and-authorization-code-fixed-length-
+	// After 12 April 2022, this will default to false and won't be changeable
+	IssueOpaqueAccessTokens *bool `json:"issue_opaque_access_tokens,omitempty"`
 }
 
 // TenantUniversalLogin holds universal login settings.
